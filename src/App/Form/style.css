@@ -1,0 +1,28 @@
+.main__calculator{
+    max-width: 800px;
+    text-align: center;
+    margin: 25px 75px;
+    padding: 25px;
+    background-color: rgb(30, 30, 30);
+    font-size: 25px;
+    color: orange;
+    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
+    box-shadow: 0px 0px 60px orange;
+}
+
+.calculator-result{
+    color: white;
+    text-shadow: 0px 0px 10px orange;
+    font-size: 150%;
+}
+
+.form_fieldset{
+    font-size:30px;
+    color:orange;
+    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
+    text-align: center;
+    border: solid orange 2px;
+    border-radius: 10px 10px 30% 30%;
+    box-shadow: 0px 0px 60px orange;
+    background-color: rgb(30, 30, 30);
+}

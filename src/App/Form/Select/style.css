@@ -1,0 +1,18 @@
+.calculaor-select{
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
+    margin: solid orange 2px;
+    box-shadow: 0px 0px 10px orange; 
+}
+
+.calculaor-select:hover{
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    box-shadow: 0px 0px 20px orange;
+}
+
+.calculaor-select:active{
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0px 0px 10px orange;
+}
