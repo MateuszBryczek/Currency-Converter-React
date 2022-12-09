@@ -1,28 +1,87 @@
-.main__calculator{
-    max-width: 800px;
-    text-align: center;
-    margin: 25px 75px;
-    padding: 25px;
+.form__header{
+    border: solid orange 2px;
+    border-radius: 30% 30% 10px 10px;
+    max-width: 500px;
     background-color: rgb(30, 30, 30);
-    font-size: 25px;
-    color: orange;
-    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
-    box-shadow: 0px 0px 60px orange;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 5px orange; 
+    text-shadow: 2px 2px orange, 0px 0px 10px orange;
+    color: rgb(10, 10, 10);
+    font-size: 40px;
+    padding: 10px;
 }
 
-.calculator-result{
-    color: white;
-    text-shadow: 0px 0px 10px orange;
-    font-size: 150%;
-}
-
-.form_fieldset{
+.main{
+    max-width: 800px;
     font-size:30px;
     color:orange;
     text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
     text-align: center;
     border: solid orange 2px;
     border-radius: 10px 10px 30% 30%;
-    box-shadow: 0px 0px 60px orange;
+    box-shadow: 0px 0px 5px orange;
     background-color: rgb(30, 30, 30);
+    padding: 20px;
+    margin: 5px;
+}
+
+.form__label{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:767px){
+    .form__label{
+        flex-direction: column;
+    }  
+}
+
+.result{
+    color: white;
+    text-shadow: 0px 0px 10px orange;
+    font-size: 150%;
+}
+
+.form__field{
+    margin: 10px;
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
+    margin: solid orange 2px;
+    box-shadow: 0px 0px 10px orange;
+}
+
+.form__field:hover{
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    box-shadow: 0px 0px 20px orange;
+}
+
+.form__field:active{
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0px 0px 10px orange;
+}
+
+.form__button{
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    text-shadow: 2px 2px rgb(10, 10, 10), 0px 0px 10px orange;
+    margin: solid orange 2px;
+    box-shadow: 0px 0px 10px orange; 
+}
+
+.form__button:hover{
+    background-color: rgb(10, 10, 10);
+    color:orange;
+    box-shadow: 0px 0px 20px orange;
+    cursor: pointer;
+}
+
+.form__button:active{
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0px 0px 10px orange;
+    cursor: progress;
 }

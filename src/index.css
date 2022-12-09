@@ -8,30 +8,3 @@ html {
 ::before {
   box-sizing: inherit;
 }
-
-.body{
-  background-image:url("App/images/money background.jpg"); 
-  padding-top: 50px;
-  padding-bottom: 400px;
-  background-size: contain;
-}
-
-.header{
-    border: solid orange 2px;
-    border-radius: 30% 30% 10px 10px;
-    max-width: 500px;
-    background-color: rgb(30, 30, 30);
-    text-align: center;
-    margin: auto;
-    box-shadow: 0px 0px 60px orange; 
-    text-shadow: 2px 2px orange, 0px 0px 10px orange;
-    color: rgb(10, 10, 10);
-    font-size: 30px;
-}
-
-.main{
-  max-width: 800px;
-  text-align: center;
-  margin: auto;
-  margin-top: 10px;
-}
