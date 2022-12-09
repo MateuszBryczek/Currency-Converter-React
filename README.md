@@ -1,10 +1,42 @@
+# currency converter
+
+Website prepared for the [YouCode](https://youcode.pl/frontend-developer-od-podstaw/) course.
+![youcode-logo](https://youcode.pl/wp-content/uploads/2022/02/youcode-logo-ukraine.png)
+
+Website have default polish language.
+
+This is simple project, used to convert currencies from PLN to USD / EUR / GBP.
+
+Try it by yourself: >>https://x-rey11.github.io/currency-converter/<<
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Code fragment:
 
-In the project directory, you can run:
+```javascript
+const [result, setResult] = useState();
+
+  const calculateResult = (currency, amount) => {
+    const rate = currencies
+      .find(({short}) => short === currency)
+      .rate;
+
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount / rate,
+      currency,
+    });
+  }
+```
+
+## Tools used:
+- HTML
+- CSS
+- Javascript
+- Normalize.css
+- Open Graph Protocol
+- React
 
 ### `npm start`
 
