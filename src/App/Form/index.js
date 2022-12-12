@@ -20,7 +20,7 @@ return (
                 <label className="form_label">
                     Kwota w PLN*: 
                     <input value={amount}
-                        onChange={({target}) => setAmount(target.value)}
+                        onChange={({ target }) => setAmount(target.value)}
                         placeholder="Podaj kwotę w PLN"
                         className="form__field"
                         type="number"
@@ -32,7 +32,7 @@ return (
                     Przelicz na:
                     <select className="form__field"
                         value={currency}
-                        onChange={({target}) => setCurrency(target.value)}
+                        onChange={({ target }) => setCurrency(target.value)}
                     >
                     {currencies.map((currency => (
                         <option
