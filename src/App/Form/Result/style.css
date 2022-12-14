@@ -1,3 +1,9 @@
+.result{
+    color: white;
+    text-shadow: 0px 0px 10px orange;
+    font-size: 150%;
+}
+
 @media(max-width:767px){
     .result{
         display: flex;
