@@ -2,8 +2,6 @@ import Form from "./App/Form";
 import "./App.css"
 import { useState } from 'react';
 import { currencies } from "./App/currencies";
-import { Time } from "./App/Time"
-
 
 function App() {
 
