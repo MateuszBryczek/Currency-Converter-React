@@ -37,6 +37,7 @@ const [result, setResult] = useState();
 - Normalize.css
 - Open Graph Protocol
 - React
+- Styled Components
 
 ### `npm start`
 
