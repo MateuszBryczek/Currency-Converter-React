@@ -1,20 +1,23 @@
-import { useState, useEffect } from "react";
 import {StyledTime} from "./styled";
-import { useCurrentDate } from "./useCurrentdate";
+import { useCurrentDate } from "./useCurrentDate";
+
+const formatDate = (date) => date.toLocaleString(undefined, {
+    month: "long",
+    weekday: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+});
 
 export const Time = () => {
     const date = useCurrentDate();
 
     return (
         <StyledTime>
-            {date.toLocaleDateString(undefined, {
-                month: "long",
-                weekday: "long",
-                day: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-            })}
+            Dzisiaj jest
+            {" "}
+            {formatDate(date)}
         </StyledTime>
     )
 };
