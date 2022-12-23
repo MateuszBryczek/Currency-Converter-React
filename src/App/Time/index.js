@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {StyledTime} from "./styled"
+import {StyledTime} from "./styled";
 
 export const Time = () => {
     const [date, setDate] = useState(new Date());
