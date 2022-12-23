@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Result } from "./Result";
 import { currencies } from "../currencies";
 import { Time } from "../Time"
+import { FormHeader, Main, FormLabel, FormField, FormButton } from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -15,11 +16,13 @@ export const Form = ({ calculateResult, result }) => {
 
 
 return (
-    <form className="form" onSubmit={onSubmit}>
-        <h1 className="form__header">Kalkulator walut</h1>
-            <main className="main">
+    <FormField onSubmit={onSubmit}>
+        <FormHeader>
+            Kalkulator walut
+        </FormHeader>
+            <Main>
             <Time/>
-                <label className="form_label">
+                <FormLabel>
                     Kwota w PLN*: 
                     <input value={amount}
                         onChange={({ target }) => setAmount(target.value)}
@@ -29,8 +32,8 @@ return (
                         requied
                         step="0.01"
                     />
-                </label>
-                <label className="form__label">
+                </FormLabel>
+                <FormLabel>
                     Przelicz na:
                     <select className="form__field"
                         value={currency}
@@ -45,14 +48,16 @@ return (
                         </option>
                     )))}
                     </select>
-                </label>
+                </FormLabel>
                 <p>
-                    <button className="form__button">Oblicz</button>
+                    <FormButton>
+                        Oblicz
+                    </FormButton>
                 </p>
                 
                 <Result result={result} />
-            </main>
-    </form>
+            </Main>
+    </FormField>
 )};
 
 export default Form;
