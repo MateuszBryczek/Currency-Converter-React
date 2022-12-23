@@ -1,4 +1,3 @@
-import "./style.css";
 import React, { useState } from 'react';
 import { Result } from "./Result";
 import { currencies } from "../currencies";

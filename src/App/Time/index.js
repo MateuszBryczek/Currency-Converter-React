@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./style.css"
+import {StyledTime} from "./styled"
 
 export const Time = () => {
     const [date, setDate] = useState(new Date());
@@ -15,7 +15,7 @@ export const Time = () => {
     }, []);
 
     return (
-        <div className="time">
+        <StyledTime>
             {date.toLocaleDateString(undefined, {
                 month: "long",
                 weekday: "long",
@@ -24,7 +24,7 @@ export const Time = () => {
                 minute: "2-digit",
                 second: "2-digit",
             })}
-        </div>
+        </StyledTime>
     )
 };
 
