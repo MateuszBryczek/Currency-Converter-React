@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Loading = styled.p`
+    color:white;
+`;
+
+export const LoadingFailure = styled.p`
+    color:crimson;
+`;
+
 export const FormHeader = styled.header`
     border: solid orange 2px;
     border-radius: 30% 30% 10px 10px;
@@ -39,7 +47,7 @@ export const FormLabel = styled.label`
     }  
 `;
 
-export const FormField = styled.field`
+export const FormField = styled.fieldset`
     margin-bottom: 10px;
     margin-left: 5px;
     background-color: rgb(10, 10, 10);
@@ -78,4 +86,9 @@ export const FormButton = styled.button`
     box-shadow: 0px 0px 10px orange;
     cursor: progress;
     }
+`;
+
+export const Info = styled.div`
+    color: white;
+    text-align: center;
 `;

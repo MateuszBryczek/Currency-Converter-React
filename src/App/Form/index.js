@@ -1,26 +1,47 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Result } from "./Result";
-import { currencies } from "../currencies";
-import { Time } from "../Time"
-import { FormHeader, Main, FormLabel, FormField, FormButton } from "./styled";
+import { Time } from "../Time";
+import { useRatesData } from './useRatesData';
+import { Loading, LoadingFailure, FormHeader, Main, FormLabel, FormField, FormButton, Info } from "./styled";
 
-export const Form = ({ calculateResult, result }) => {
-    const [currency, setCurrency] = useState(currencies[0].short);
-    const [amount, setAmount] = useState("");
+export const Form = () => {
+    const [result, setResult] = useState();
+    const ratesData = useRatesData();
+
+    const calculateResult = (currency, amount) => {
+        const rate = ratesData.rates[currency];
+
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: amount * rate,
+            currency,
+        });
+    }
 
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
     }
 
-
 return (
     <FormField onSubmit={onSubmit}>
         <FormHeader>
             Kalkulator walut
         </FormHeader>
-            <Main>
-            <Time/>
+        <Main>
+        <Time/>
+        {ratesData.state === "loading" 
+            ? (
+                <Loading>
+                    Chwilka... <br>Ładujemy kursy walut z Europejskiego Banku Centralnego</br>
+                </Loading>
+            ) : (
+                ratesData.state === "error" ? (
+                <LoadingFailure>
+                    Wyglada na to że coś poszło nie tak. Spróbuj ponownie później
+                </LoadingFailure>
+            ) : (
+                <>
                 <FormLabel>
                     Kwota w PLN*: 
                     <input value={amount}
@@ -38,12 +59,12 @@ return (
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                     >
-                    {currencies.map((currency => (
+                    {Object.keys(ratesData.rates).map((currency => (
                         <option
-                            key={currency.short}
-                            value={currency.short}
+                            key={currency}
+                            value={currency}
                         >
-                            {currency.name}
+                            {currency}
                         </option>
                     )))}
                     </select>
@@ -55,7 +76,12 @@ return (
                 </p>
                 
                 <Result result={result} />
-            </Main>
+                <Info>
+                    Kursy walut pobierane są z Europejskiego Banku Centralnego
+                </Info>
+            </>
+    ))}
+    </Main>  
     </FormField>
 )};
 
