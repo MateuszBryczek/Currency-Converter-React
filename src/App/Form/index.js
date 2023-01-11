@@ -18,6 +18,9 @@ export const Form = () => {
         });
     }
 
+    const [currency, setCurrency] = useState("EUR");
+    const [amount, setAmount] = useState ("");
+
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
@@ -33,7 +36,7 @@ return (
         {ratesData.state === "loading" 
             ? (
                 <Loading>
-                    Chwilka... <br>Ładujemy kursy walut z Europejskiego Banku Centralnego</br>
+                    Chwilka... Ładujemy kursy walut z Europejskiego Banku Centralnego
                 </Loading>
             ) : (
                 ratesData.state === "error" ? (
