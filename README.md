@@ -15,19 +15,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Code fragment:
 
 ```javascript
-const [result, setResult] = useState();
+export const Form = () => {
+    const [result, setResult] = useState();
+    const ratesData = useRatesData();
 
-  const calculateResult = (currency, amount) => {
-    const rate = currencies
-      .find(({short}) => short === currency)
-      .rate;
+    const calculateResult = (currency, amount) => {
+        const rate = ratesData.rates[currency];
 
-    setResult({
-      sourceAmount: +amount,
-      targetAmount: amount / rate,
-      currency,
-    });
-  }
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: amount * rate,
+            currency,
+        });
+    }
 ```
 
 ## Tools used:
