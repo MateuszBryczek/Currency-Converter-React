@@ -47,7 +47,7 @@ export const FormLabel = styled.label`
     }  
 `;
 
-export const FormField = styled.fieldset`
+export const Field = styled.fieldset`
     margin-bottom: 10px;
     margin-left: 5px;
     background-color: rgb(10, 10, 10);
@@ -88,7 +88,7 @@ export const FormButton = styled.button`
     }
 `;
 
-export const Info = styled.div`
+export const Info = styled.footer`
     color: white;
     text-align: center;
 `;

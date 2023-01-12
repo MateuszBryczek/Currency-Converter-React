@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Result } from "./Result";
 import { Time } from "../Time";
 import { useRatesData } from './useRatesData';
-import { Loading, LoadingFailure, FormHeader, Main, FormLabel, FormField, FormButton, Info } from "./styled";
+import { Loading, LoadingFailure, FormHeader, Main, FormLabel, Field, FormButton, Info } from "./styled";
 
 export const Form = () => {
     const [result, setResult] = useState();
@@ -27,7 +27,7 @@ export const Form = () => {
     }
 
 return (
-    <FormField onSubmit={onSubmit}>
+    <form onSubmit={onSubmit}>
         <FormHeader>
             Kalkulator walut
         </FormHeader>
@@ -47,18 +47,20 @@ return (
                 <>
                 <FormLabel>
                     Kwota w PLN*: 
-                    <input value={amount}
+                    <Field as="input"
+                        value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         placeholder="Podaj kwotę w PLN"
-                        className="form__field"
                         type="number"
                         requied
                         step="0.01"
-                    />
+                    >
+                    </Field>
                 </FormLabel>
                 <FormLabel>
-                    Przelicz na:
-                    <select className="form__field"
+                    Przelicz na: 
+                    <Field
+                        as="select"
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                     >
@@ -70,7 +72,7 @@ return (
                             {currency}
                         </option>
                     )))}
-                    </select>
+                    </Field>
                 </FormLabel>
                 <p>
                     <FormButton>
@@ -85,7 +87,7 @@ return (
             </>
     ))}
     </Main>  
-    </FormField>
+    </form>
 )};
 
 export default Form;
