@@ -5,7 +5,7 @@ Website prepared for the [YouCode](https://youcode.pl/frontend-developer-od-pods
 
 Website have default polish language.
 
-This is simple project, used to convert currencies from PLN to USD / EUR / GBP.
+the program downloads rates from the central bank, so you can easily convert currencies from PLN according to current rates.
 
 Try it by yourself: >>https://x-rey11.github.io/currency-converter-react/<<
 # Getting Started with Create React App
