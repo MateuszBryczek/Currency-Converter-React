@@ -7,7 +7,7 @@ Website have default polish language.
 
 the program downloads rates from the central bank, so you can easily convert currencies from PLN according to current rates.
 
-Try it by yourself: >>https://x-rey11.github.io/currency-converter-react/<<
+Try it by yourself: >>https://mateuszbryczek.github.io/currency-converter-react/<<
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
